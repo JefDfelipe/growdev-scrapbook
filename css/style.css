@@ -1,0 +1,184 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(36, 128, 106);
+}
+
+.container-field {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1440px;
+    width: 100%;
+    height: 80%;
+    border: 1px solid #000;
+}
+
+.field-sides {
+    position: relative;
+    width: 50%;
+    background-color: rgb(163, 255, 234);
+}
+
+.background {
+    background-image: url(../img/ghibli.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.key-img {
+    height: 200px;
+    width: 100px;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.key-img2 {
+    height: 100px;
+    width: 50px;
+}
+
+.container-inputs {
+    background-color: rgb(163, 255, 234);
+}
+
+.field-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: rgb(163, 255, 234);
+}
+
+.field-sides h4 {
+    background-color: rgb(163, 255, 234);
+    color: rgb(18, 64, 53);
+}
+
+.input-field {
+    height: 35px;
+    width: 49%;
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 8px;
+    background-color: rgb(163, 255, 234);
+}
+
+.form-field .button {
+    width: 100%;
+    background-color: rgb(71, 255, 212);
+    color: rgb(18, 64, 53);
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.form-field .button:hover {
+    background-color: rgb(54, 192, 160);
+    font-size: 22px;
+}
+
+.register {
+    width: 100%;
+    color: rgb(18, 64, 53);
+    background-color: rgb(56, 218, 180);
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.register:hover {
+    background-color: rgb(41, 163, 135);
+    font-size: 17px;
+}
+
+.login {
+    width: 100%;
+    color: rgb(18, 64, 53);
+    background-color: rgb(56, 218, 180);
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.login:hover {
+    background-color: rgb(41, 163, 135);
+    font-size: 17px;
+}
+
+.field-sides a {
+    text-decoration: none;
+    color: rgb(18, 64, 53);
+}
+
+.container-errand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    background-color: rgb(163, 255, 234);
+    border-radius: 10px;
+}
+
+.container-errand .header {
+    width: 100%;
+    padding: 0 5px;
+    height: 110px
+}
+
+.header h1 {
+    font-size:70px
+}
+
+.header .button-add {
+    font-size: 30px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    background-color: rgb(54, 192, 160);
+    color: rgb(18, 64, 53);
+    font-weight: 600;
+    text-align: center;
+    height: 60px;
+    width: 260px;
+}
+
+.header .button-add:hover,
+table .button-table:hover {
+    background-color: rgb(252, 182, 101);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.container-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+}
+
+table .button-table {
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 60px;
+    background-color: rgb(54, 192, 160);
+}
+
+table .button-table:hover {
+    background-color: rgb(252, 182, 101);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
