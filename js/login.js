@@ -1,3 +1,22 @@
+// primeira forma
+axios(url).then(response => {
+    // TODO Auto-generated
+    // response.data
+    // response.status
+}).catch(error => {
+    // TODO
+})
+
+// segunda forma
+async function getData() {
+    try {
+        const response = await axios('url');
+        // response.data
+        // response.status
+    } catch (error) {
+        // TODO: tratar erro
+    }
+}
 // Função para ir para tela de cadastro
 function onNewAccount() {
     return location.href = 'register.html';
