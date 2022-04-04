@@ -1,40 +1,28 @@
-// primeira forma
-axios(url).then(response => {
-    // TODO Auto-generated
-    // response.data
-    // response.status
-}).catch(error => {
-    // TODO
-})
+async function onLogin() {
+    event.preventDefault();
 
-// segunda forma
-async function getData() {
-    try {
-        const response = await axios('url');
-        // response.data
-        // response.status
-    } catch (error) {
-        // TODO: tratar erro
-    }
-}
-// Função para ir para tela de cadastro
+    const loginUsername = document.getElementById('login-user');
+    const loginPassword = document.getElementById('login-password');
+    const loginError = document.getElementsByClassName('login-error');
+    const user = {
+        name: loginUsername,
+        password: loginPassword
+    };
+
+    if (!loginUsername || !loginPassword) {
+        loginError.innerHTML = 'Favor, preencher todos os campos!'
+    };
+
+    const {status, data} = await axios.post('https://growdev-jeferson-backend.herokuapp.com/login', user);
+
+    if (status === 200) {
+        localStorage.setItem('user', JSON.stringify(data));
+        return location.href = 'reminders.html';
+    } else {
+        loginError.innerHTML = 'Usuário não encontrado!';
+    };
+};
+
 function onNewAccount() {
     return location.href = 'register.html';
-}
-
-// Função para logar
-const accountLocalStorage = JSON.parse(localStorage.getItem('accounts'))
-const loginUsername = document.getElementById('login-user');
-const loginPassword = document.getElementById('login-password')
-
-function onLogin() {
-
-    for (user of accountLocalStorage) {
-        if (loginUsername.value === user.username && loginPassword.value === user.password) {
-            console.log('Logado com sucesso');
-            return location.href = 'reminders.html';
-        } else {
-            alert('Usuário ou Senha incorretos!')
-        }
-    }
-}
+};

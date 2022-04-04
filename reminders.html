@@ -16,12 +16,12 @@
         <div class="header d-flex justify-content-between align-items-center">
             <h1>Recados</h1>
             <img src="../img/key.png" alt="key" class="key-img2">
-            <div class="button-add" id="add-item" onclick="addNotes()">Adicionar Recado</div>
+            <input type="text" id="note-description" placeholder="Descrição do recado">
+            <input type="button" value="Adicionar Recado" class="button-add" id="add-item" onclick="addNotes()"></input>
         </div>
         <table class="table table-striped">
             <thead class="table-dark">
                 <tr>
-                    <th scope="col" class="text-center">#</th>
                     <th scope="col" class="text-center">Descrição</th>
                     <th scope="col" class="text-center">Data</th>
                     <th scope="col" class="text-center">Ação</th>
@@ -35,7 +35,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="../js/notes.js"></script>
+    <script src="./js/notes.js"></script>
 </body>
 
 </html>
