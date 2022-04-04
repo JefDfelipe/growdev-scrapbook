@@ -36,7 +36,7 @@ async function addNotes() {
         data.description = noteContent.description;
 
         showNotes.innerHTML += `<td>${data.description}</td>
-                                <td>${today}</td>
+                                <td>${data.date}</td>
                                 <td>
                                     <input type="button" value="Excluir" id="delete-note"></input>
                                     <input type="button" value="Editar" id="update-note" ></input>
